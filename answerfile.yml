@@ -1,9 +1,9 @@
 # Infrastructure
 # - Defines the vCenter / vSphere environment
-deploy_vsphere_host: '172.20.22.4'
-deploy_vsphere_user: 'administrator@vcsa1.hezardastan.net'
-deploy_vsphere_password: 'H[8uL/;7Dy<5?$H%4HYs'
-deploy_vsphere_datacenter: 'Farhang'
+deploy_vsphere_host: '172.16.1.1'
+deploy_vsphere_user: 'administrator@vsphere.local'
+deploy_vsphere_password: '123'
+deploy_vsphere_datacenter: 'DC'
 deploy_vsphere_folder: '/LAB VMs'
 deploy_vsphere_cluster: 'Lab'
 
@@ -15,7 +15,7 @@ guest_gateway: '192.168.51.1'
 guest_dns_server: '8.8.8.8'
 guest_network2: 'dc-appTr01'
 guest_netmask2: '255.255.255.0'
-guest_domain_name: 'hezardastan.net'
+guest_domain_name: 'test.local'
 guest_id: 'rhel7_64Guest'
 guest_memory: '8096'
 guest_vcpu: '4'
