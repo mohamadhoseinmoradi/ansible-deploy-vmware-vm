@@ -14,16 +14,24 @@
     guest_id: '{{ guest_id }}'
     annotation: "{{ guest_notes }}"
     disk:
-    - size_gb: 30
+    - size_gb: '{{ size_of_disk1 }}'
       type: thin
-      datastore: '{{ deploy_vsphere_datastore }}'
+      datastore: '{{ deploy_vsphere_datastore1 }}'
+    - size_gb: '{{ size_of_disk2 }}'
+      type: thin
+      datastore: '{{ deploy_vsphere_datastore2 }}'
     networks:
-    - name: '{{ guest_network }}'
-      ip: '{{ guest_custom_ip }}'
-      netmask: '{{ guest_netmask }}'
+    - name: '{{ guest_network1 }}'
+      ip: '{{ guest_custom_ip1 }}'
+      netmask: '{{ guest_netmask1 }}'
       gateway: '{{ guest_gateway }}'
+      start_connected: True
       dns_servers:
       - '{{ guest_dns_server }}'
+    - name: '{{ guest_network2 }}'
+      ip: '{{ guest_custom_ip2 }}'
+      netmask: '{{ guest_netmask2 }}'
+      start_connected: True
     hardware:
       memory_mb: '{{ guest_memory }}'
       num_cpus: '{{ guest_vcpu }}'
